@@ -1,0 +1,34 @@
+# Build the KLEE/benchmark trees fresh inside the image (do not copy local ones)
+benchmarks/*
+!benchmarks/build.sh
+**/valina-build/
+**/qc-build/
+**/klee/build/
+**/klee-uclibc/
+**/obj-gcov*/
+**/obj-llvm/
+
+# Experiment outputs
+**/featmaker_experiments/
+**/symtuner/output/
+**/outout/
+**/experiments/
+**/*_experiments/
+
+# Python venvs / caches / build products
+**/venv/
+**/.venv/
+sniffles/global/
+sniffles/3.10.16/
+__pycache__/
+*.pyc
+*.egg-info/
+*.egg-link
+/build/
+dist/
+.eggs/
+
+# VCS / misc
+.git/
+*.log
+.DS_Store

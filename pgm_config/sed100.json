@@ -1,0 +1,11 @@
+{
+    "pgm_name": "sed",
+    "pgm_dir": "benchmarks/sed-4.8/obj-llvm/",
+    "exec_dir": "/sed",
+    "gcov_path": "benchmarks/sed-4.8/obj-gcov1",
+    "gcov_file": "../*/*.gcov ../*/*/*.gcov",
+    "gcda_file": "../*/*.gcda ../*/*/*.gcda",
+    "sym_args": "--sym-args 0 1 10 --sym-args 0 2 2 --sym-files 1 8 --sym-stdin 8 --sym-stdout",
+    "sym_options": "--sym-args 0 1 10 --sym-args 0 2 2 --sym-files 1 8 --sym-stdin 8 --sym-stdout",
+    "sym_options_list": []
+}

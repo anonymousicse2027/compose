@@ -1,0 +1,74 @@
+{
+    "grep": {
+        "gcov_dir": "benchmarks/grep-3.6/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./grep ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "sed": {
+        "gcov_dir": "benchmarks/sed-4.8/obj-gcov<gcov_num>/sed",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./sed ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "gawk": {
+        "gcov_dir": "benchmarks/gawk-5.1.0/obj-gcov<gcov_num>",
+        "rm_cmd": "rm -f ./*.gcov ./*/*.gcov ./*.gcda ./*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./gawk ",
+        "cov_cmd": "gcov -b ./*.gcda ./*/*.gcda 1> cov_result 2> err"
+    },
+    "nano": {
+        "gcov_dir": "benchmarks/nano-4.9/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 0.1s <klee_replay> ./nano ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "diff": {
+        "gcov_dir": "benchmarks/diffutils-3.7/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./diff ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "find": {
+        "gcov_dir": "benchmarks/findutils-4.7.0/obj-gcov<gcov_num>/find",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./find ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "csplit": {
+        "gcov_dir": "benchmarks/csplit-8.32/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./csplit ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "ptx": {
+        "gcov_dir": "benchmarks/ptx-8.32/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./ptx ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "expr": {
+        "gcov_dir": "benchmarks/expr-8.32/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./expr ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "m4": {
+        "gcov_dir": "benchmarks/m4-1.4.19/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 10s <klee_replay> ./m4 ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "tac": {
+        "gcov_dir": "benchmarks/tac-8.32/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./tac ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    },
+    "nl": {
+        "gcov_dir": "benchmarks/nl-8.32/obj-gcov<gcov_num>/src",
+        "rm_cmd": "rm -f ../*/*.gcov ../*/*/*.gcov ../*/*.gcda ../*/*/*.gcda cov_result",
+        "replay_cmd": "timeout 5s <klee_replay> ./nl ",
+        "cov_cmd": "gcov -b ../*/*.gcda ../*/*/*.gcda 1> cov_result 2> err"
+    }
+}

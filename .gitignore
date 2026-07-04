@@ -1,0 +1,43 @@
+# ---- Built benchmarks (rebuild with build.sh; embed absolute paths) ----
+benchmarks/*
+!benchmarks/build.sh
+**/obj-gcov*/
+**/obj-llvm/
+*.bc
+*.gcov
+*.gcda
+*.gcno
+
+# ---- KLEE build trees (regenerate with cmake/make; absolute-path caches) ----
+**/valina-build/
+**/qc-build/
+**/klee/build/
+CMakeCache.txt
+CMakeFiles/
+
+# ---- Experiment outputs / results ----
+**/featmaker_experiments/
+**/symtuner/output/
+**/outout/
+**/experiments/
+**/*_experiments/
+**/result/
+**/klee-out-*/
+**/klee-last
+
+# ---- Python venvs / caches ----
+sniffles/venv/
+sniffles/global/
+sniffles/3.10.16/
+**/venv/
+**/.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+*.egg-link
+/build/
+dist/
+
+# ---- Misc ----
+*.log
+.DS_Store
