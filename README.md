@@ -29,8 +29,8 @@ CompoSE/
 │
 ├── CompoSE_FeatMaker/           Baseline 1: FeatMaker
 │   ├── run_featmaker.py                    Base
-│   ├── run_compose_naive_featmaker.py      +Naive
-│   ├── run_compose_featmaker.py            +CompoSE
+│   ├── run_featmaker_naive.py      +Naive
+│   ├── run_featmaker_compose.py            +CompoSE
 │   ├── featmaker_subscript/                KLEE execution / coverage / feature helpers
 │   ├── klee/                               FeatMaker's KLEE (build here; git-ignored)
 │   └── test.env                            Environment file for KLEE's POSIX runtime
@@ -128,10 +128,10 @@ Each command runs one tool in one variant. Run each command from the tool's own 
 python3 run_featmaker.py --pgm csplit --config 100 --total_budget 3600 --output_dir test
 
 # +Naive
-python3 run_compose_naive_featmaker.py --pgm csplit --config 100 --total_budget 3600 --output_dir test
+python3 run_featmaker_naive.py --pgm csplit --config 100 --total_budget 3600 --output_dir test
 
 # +CompoSE
-python3 run_compose_featmaker.py --pgm csplit --config 100 --total_budget 3600 --output_dir test
+python3 run_featmaker_compose.py --pgm csplit --config 100 --total_budget 3600 --output_dir test
 ```
 
 > `--config 100` selects `pgm_config/csplit100.json`.
@@ -211,7 +211,7 @@ half-baseline / half-CompoSE runs are combined.
 # 1) Baseline for half the budget, then +CompoSE for the other half:
 python3 CompoSE_FeatMaker/run_featmaker.py \
         --pgm csplit --config 100 --total_budget 1800 --output_dir base_half
-python3 CompoSE_FeatMaker/run_compose_featmaker.py \
+python3 CompoSE_FeatMaker/run_featmaker_compose.py \
         --pgm csplit --config 100 --total_budget 1800 --output_dir compose_half
 
 # 2) Combined branch coverage of both runs:
