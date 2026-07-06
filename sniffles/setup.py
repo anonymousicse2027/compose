@@ -23,7 +23,7 @@ setup(
         ],
     },
     data_files=[
-        ('share/doc/sniffles', ['README.md', 'LICENSE']),
+        ('share/doc/sniffles', ['LICENSE']),
         ('share/examples/sniffles',
          ['examples/example1.xml',
           'examples/example2.xml',

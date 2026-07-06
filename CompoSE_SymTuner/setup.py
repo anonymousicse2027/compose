@@ -1,14 +1,12 @@
 from setuptools import find_packages, setup
 from symtuner import __version__
 
-with open('./README.md') as f:
-    LONG_DESCRIPTION = f.read()
 
 setup(
     name='symtuner',
     version=__version__,
     description='SymTuner (+ naive / compose variants)',
-    long_description=LONG_DESCRIPTION,
+    long_description='',
     python_version='>=3.6',
     packages=find_packages(include=('symtuner', 'symtuner.*')),
     include_package_data=True,
