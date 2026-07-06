@@ -387,13 +387,13 @@ rm_cmd = settings['rm_cmd']
 replay_cmd = settings['replay_cmd'].replace('<klee_replay>', args.klee_replay)
 cov_cmd = settings['cov_cmd']
 
-csv_filename = os.path.join(args.output_dir, f"klee-{program}", "branch_visit_count", f"all1_{tool_suffix}_{program}{nxargs_suffix}_branch_visit_count.csv")
-function_csv_filename = os.path.join(args.output_dir, f"klee-{program}", "function_execution_data", f"all1_{tool_suffix}_{program}{nxargs_suffix}_function_execution.csv")
+csv_filename = os.path.abspath(os.path.join(args.output_dir, f"klee-{program}", "branch_visit_count", f"{tool_suffix}_{program}{nxargs_suffix}_branch_visit_count.csv"))
+function_csv_filename = os.path.abspath(os.path.join(args.output_dir, f"klee-{program}", "function_execution_data", f"{tool_suffix}_{program}{nxargs_suffix}_function_execution.csv"))
 
 os.makedirs(os.path.dirname(csv_filename), exist_ok=True)
 os.makedirs(os.path.dirname(function_csv_filename), exist_ok=True)
 
-ktest_files_list = find_ktest_files(src_dirs)
+ktest_files_list = [os.path.abspath(p) for p in find_ktest_files(src_dirs)]
 
 print(len(ktest_files_list))
 
